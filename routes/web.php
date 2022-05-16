@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/comprovantes', 'ComprovantesController@index');
+Route::get('/comprovantes/create', 'ComprovantesController@create');
