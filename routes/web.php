@@ -16,3 +16,7 @@ Route::get('/', function () {
 });
 Route::get('/comprovantes', 'ComprovantesController@index');
 Route::get('/comprovantes/create', 'ComprovantesController@create');
+Route::post('/comprovantes/create', 'ComprovantesController@store');
+Route::delete('/comprovantes/{id}', 'ComprovantesController@destroy');
+Route::get('/comprovantes/edit/{id}', 'ComprovantesController@edit');
+Route::put('/comprovantes/update/{id}', 'ComprovantesController@update');

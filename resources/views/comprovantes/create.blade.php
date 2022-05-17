@@ -5,7 +5,8 @@ Adicionar comprovante
 @endsection
 
 @section('conteudo')
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
+        @csrf
         <div class="form-group">
             <label for="nome">Nome</label>
             <input type="text" class="form-control" name="nome" id="nome">
@@ -23,12 +24,14 @@ Adicionar comprovante
             <input type="text" class="form-control" name="complemento" id="complemento">
             <label for="cidade">Cidade</label>
             <input type="text" class="form-control" name="cidade" id="cidade">
+            <label for="estado">Estado</label>
+            <input type="text" class="form-control" name="estado" id="estado">
             <label for="status">Status</label>
             <input type="text" class="form-control" name="status" id="status">
             <label for="observacoes">Observacoes</label>
             <input type="text" class="form-control" name="observacoes" id="observacoes">
             <label for="imagem">Imagem</label>
-            <input type="file" name="imagem" accept="image/png, image/gif, image/jpeg" />
+            <input type="file" name="imagem" accept="image/png, image/gif, image/jpeg" >
 
 
         </div>
